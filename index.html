@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AJ Company - AML Department GPA/CGPA Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="\images\LOGO_.jpg" alt="AJ Company Logo" class="logo">
+            <h1>AML Department Academic GPA AND CGPA Calculator</h1>
+        </header>
+        
+        <div class="tabs">
+            <button class="tab-btn active" data-tab="gpa">GPA Calculator</button>
+            <button class="tab-btn" data-tab="cgpa">CGPA Calculator</button>
+        </div>
+        
+        <div id="gpa" class="tab-content active">
+            <div class="semester-selector">
+                <label for="semester">Select Semester:</label>
+                <select id="semester">
+                    <option value="1">Semester 1</option>
+                    <option value="2">Semester 2</option>
+                    <option value="3">Semester 3</option>
+                    <option value="4">Semester 4</option>
+                    <option value="5">Semester 5</option>
+                    <option value="6">Semester 6</option>
+                    <option value="7">Semester 7</option>
+                    <option value="8">Semester 8</option>
+                </select>
+            </div>
+            
+            <div class="courses-container">
+                <table id="gpa-courses">
+                    <thead>
+                        <tr>
+                            <th>Subject Code</th>
+                            <th>Subject Name</th>
+                            <th>Credits</th>
+                            <th>Grade</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><input type="text" class="course-code" value="U19ENG101B" readonly></td>
+                            <td>English for Engineers-I</td>
+                            <td><input type="number" class="course-credits" value="2" min="0.1" step="0.1"></td>
+                            <td>
+                                <select class="course-grade">
+                                    <option value="">Select Grade</option>
+                                    <option value="4">O (4.0)</option>
+                                    <option value="3.7">A+ (3.7)</option>
+                                    <option value="3.3">A (3.3)</option>
+                                    <option value="3">B+ (3.0)</option>
+                                    <option value="2.7">B (2.7)</option>
+                                    <option value="2.3">C (2.3)</option>
+                                    <option value="2">U (2.0)</option>
+                                </select>
+                            </td>
+                            <td><button class="remove-btn">×</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="action-buttons">
+                <button id="reset-values" class="btn reset-btn">Reset Values</button>
+                <button id="calculate-gpa" class="btn calculate-btn">Calculate GPA</button>
+            </div>
+            
+            <div id="gpa-result" class="result">
+                <div class="total-credits">Total Credits: <span>0</span></div>
+                <div class="gpa-value">GPA: <span>0.00</span></div>
+            </div>
+        </div>
+        
+        <div id="cgpa" class="tab-content">
+            <h2>CGPA Calculator</h2>
+            <div id="semesters">
+                <div class="semester">
+                    <div class="semester-header">
+                        <h3>Semester 1</h3>
+                        <button class="remove-semester">×</button>
+                    </div>
+                    <div class="semester-inputs">
+                        <input type="number" class="semester-gpa" placeholder="GPA" min="0" max="4" step="0.01">
+                        <input type="number" class="semester-credits" placeholder="Total Credits" min="0">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="action-buttons">
+                <button id="add-semester" class="btn">+ Add Semester</button>
+                <button id="calculate-cgpa" class="btn calculate-btn">Calculate CGPA</button>
+            </div>
+            
+            <div id="cgpa-result" class="result">
+                <div class="total-credits">Total Credits: <span>0</span></div>
+                <div class="cgpa-value">CGPA: <span>0.00</span></div>
+            </div>
+        </div>
+    </div>
+    <footer class="license-footer">
+      <div class="license-container">
+          <div class="license-text">
+              <p>© 2025 AJ STUDIOS | ALL RIGHTS RESERVED... </p>
+          
+          </div>
+          <div class="license-badge">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#3498db" width="24px" height="24px">
+                  <path d="M12 2L4 5v6.09c0 5.05 3.41 9.76 8 10.91 4.59-1.15 8-5.86 8-10.91V5l-8-3zm-1.06 13.54L7.4 12l1.41-1.41 2.12 2.12 4.24-4.24 1.41 1.41-5.64 5.66z"/>
+              </svg>
+              <span>BY AJ COMPANY</span>
+          </div>
+      </div>
+  </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
