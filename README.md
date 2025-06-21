@@ -4,7 +4,7 @@ A simple web tool to calculate GPA and CGPA percentages.
 Built with HTML, CSS, and JavaScript by *AJ STUDIOS*.
 
 ## 🔗 Live Demo
-👉 [Click here to use the calculator](https://<your-username>.github.io/GPA-CALC/)
+👉 [Click here to use the calculator](https://kamesh14151.github.io/GPA-CALC/)
 
 ## 📁 Files
 - index.html – Main UI
