@@ -1,0 +1,280 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #f5f7fa;
+  color: #333;
+  line-height: 1.6;
+  padding: 20px;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.logo {
+  height: 60px;
+  margin-bottom: 15px;
+}
+
+h1 {
+  color: #2c3e50;
+  font-size: 24px;
+  margin-bottom: 5px;
+}
+
+.tabs {
+  display: flex;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #ddd;
+}
+
+.tab-btn {
+  padding: 10px 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  color: #7f8c8d;
+  transition: all 0.3s;
+}
+
+.tab-btn.active {
+  color: #3498db;
+  border-bottom: 2px solid #3498db;
+}
+
+.tab-content {
+  display: none;
+  padding: 20px 0;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+.semester-selector {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.semester-selector label {
+  font-weight: 600;
+}
+
+.semester-selector select {
+  padding: 8px 12px;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+}
+
+.courses-container {
+  margin-bottom: 20px;
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+th, td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background-color: #f8f9fa;
+  font-weight: 600;
+}
+
+input[type="text"],
+input[type="number"],
+select {
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  width: 100%;
+}
+
+input[type="text"]:read-only {
+  background-color: #f8f9fa;
+  border: 1px solid #eee;
+}
+
+.remove-btn, .remove-semester {
+  background: #e74c3c;
+  color: white;
+  border: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.btn {
+  background: #3498db;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.3s;
+}
+.reset-btn {
+  background: #e67e22;
+}
+
+.reset-btn:hover {
+  background: #d35400;
+}
+
+.btn:hover {
+  background: #2980b9;
+}
+
+.calculate-btn {
+  background: #2ecc71;
+}
+
+.calculate-btn:hover {
+  background: #27ae60;
+}
+
+.result {
+  padding: 15px;
+  background: #e8f8f5;
+  border-radius: 5px;
+  font-size: 16px;
+  color: #27ae60;
+  display: flex;
+  justify-content: space-between;
+}
+
+.result span {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.semester {
+  margin-bottom: 20px;
+  padding: 15px;
+  background: #f8f9fa;
+  border-radius: 5px;
+}
+
+.semester-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.semester-inputs {
+  display: flex;
+  gap: 10px;
+}
+
+.semester-inputs input {
+  flex: 1;
+}
+
+@media (max-width: 768px) {
+  .container {
+      padding: 15px;
+  }
+  
+  table {
+      display: block;
+      overflow-x: auto;
+  }
+  
+  .action-buttons {
+      flex-direction: column;
+  }
+  
+  .btn {
+      width: 100%;
+  }
+  
+  .semester-inputs {
+      flex-direction: column;
+  }
+}
+/* ===== PROFESSIONAL LICENSE FOOTER ===== */
+.license-footer {
+  background: linear-gradient(135deg, #2c3e50 0%, #1a2530 100%);
+  color: white;
+  padding: 15px 0;
+  margin-top: 40px;
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+.license-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.license-text p {
+  margin: 3px 0;
+  font-size: 13px;
+  color: #ecf0f1;
+}
+
+.license-id {
+  font-family: 'Courier New', monospace;
+  color: #3498db !important;
+  font-size: 12px !important;
+}
+
+.license-badge {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255,255,255,0.1);
+  padding: 8px 15px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  border: 1px solid rgba(255,255,255,0.2);
+}
+
+.license-badge svg {
+  filter: drop-shadow(0 0 2px rgba(52, 152, 219, 0.5));
+}
